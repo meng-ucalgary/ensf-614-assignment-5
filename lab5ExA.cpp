@@ -20,9 +20,48 @@ void insertion_sort(int *int_array, int n, int sort_order);
  *    If sort_order == 2 values of array are rearranged in descending order.
  */
 
-int main()
+int main(int argc, char **argv)
 {
-    int sort_order = 1; // 1 for ascending order and 2 for descending order
+    int sort_order; // 1 for ascending order and 2 for descending order
+
+    if(argc == 1)
+    {
+        sort_order = 1;
+    }
+
+    else if(argc == 2)
+    {
+        if(argv[1][0] == '-')
+        {
+            if(argv[1][1] == 'a' || argv[1][1] == 'A')
+            {
+                sort_order = 1;
+            }
+
+            else if(argv[1][1] == 'd' || argv[1][1] == 'D')
+            {
+                sort_order = 2;
+            }
+
+            else
+            {
+                cerr << "Usage: Invalid entry for the command line option." << endl;
+                exit(1);
+            }
+        }
+
+        else
+        {
+            cerr << "Usage: Invalid entry for the command line option." << endl;
+            exit(1);
+        }
+    }
+
+    else
+    {
+        cerr << "Usage: Too many arguments on the command line" << endl;
+        exit(1);
+    }
 
     int a[] = {413, 282, 660, 171, 308, 537};
 

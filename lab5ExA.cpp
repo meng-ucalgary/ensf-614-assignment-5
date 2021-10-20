@@ -8,6 +8,7 @@
  */
 
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 void insertion_sort(int *int_array, int n, int sort_order);
@@ -31,23 +32,14 @@ int main(int argc, char **argv)
 
     else if(argc == 2)
     {
-        if(argv[1][0] == '-')
+        if((strcmp(argv[1], "-a") == 0) || (strcmp(argv[1], "-A") == 0))
         {
-            if(argv[1][1] == 'a' || argv[1][1] == 'A')
-            {
-                sort_order = 1;
-            }
+            sort_order = 1;
+        }
 
-            else if(argv[1][1] == 'd' || argv[1][1] == 'D')
-            {
-                sort_order = 2;
-            }
-
-            else
-            {
-                cerr << "Usage: Invalid entry for the command line option." << endl;
-                exit(1);
-            }
+        else if((strcmp(argv[1], "-d") == 0) || (strcmp(argv[1], "-D") == 0))
+        {
+            sort_order = 2;
         }
 
         else

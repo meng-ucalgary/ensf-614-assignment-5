@@ -1,28 +1,37 @@
-
+#include<iostream>
 #ifndef POINT_H
 #define POINT_H
+
+using namespace std;
 
 class Point {
 
    public:
 
-         void setX(int xCord) ;
+          Point(double x, double y );
 
-        void setY(int yCord) ;
+          static int Counter() ;
 
-        void setID();
+          void setX(double x);
 
-        int getXcord();
+          void setY(double y);
 
-        int getYcord();
+          double getDiff(double x,double y);
 
-        int getId();
+          static double Diff(double x,double y);
 
-        void Display();
+          double getXcord();
+
+          double getYcord();
+
+          static int getId();
+
+          void Display();
+
  private :
 
-    int xCord,yCord,id = 1001;
-    int cnt ;
+    double xCord,yCord;
+    static int counter,id;
 
 };
 

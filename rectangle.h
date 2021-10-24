@@ -20,8 +20,6 @@ protected:
 public:
     Rectangle(double x, double y, double a, double b, const char *shapeName);
 
-    ~Rectangle();
-
     double area() const;
 
     double perimeter() const;

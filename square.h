@@ -21,8 +21,6 @@ protected:
 public:
     Square(double x, double y, double side, const char *shapeName);
 
-    ~Square();
-
     double area() const;
 
     double perimeter() const;

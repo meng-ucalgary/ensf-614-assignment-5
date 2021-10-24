@@ -19,11 +19,6 @@ Square::Square(double x, double y, double side, const char *shapeName): Shape(x,
     this->set_side_a(side);
 }
 
-Square::~Square()
-{
-    // do nothing special
-}
-
 double Square::area() const
 {
     return this->get_side_a() * this->get_side_a();

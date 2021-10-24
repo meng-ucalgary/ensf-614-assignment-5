@@ -20,11 +20,6 @@ Rectangle::Rectangle(double x, double y, double a, double b, const char *shapeNa
     this->set_side_b(b);
 }
 
-Rectangle::~Rectangle()
-{
-    // do nothing special
-}
-
 double Rectangle::area() const
 {
     return (this->get_side_a() * this->get_side_b());

@@ -1,38 +1,47 @@
-#include<iostream>
+/*
+ * File Name:               point.h
+ * Course:                  ENSF 614 - Fall 2021
+ * Lab # and Assignment #:  Lab 5 Exercise B
+ * Lab section:             B01
+ * Completed by:            Aastha Patel, Bhavyai Gupta
+ * Submission Date:         October 26, 2021
+ */
+
 #ifndef POINT_H
 #define POINT_H
 
-using namespace std;
+class Point
+{
+private:
+    double x;
+    double y;
+    int id;
+    static int num_of_objects;
 
-class Point {
+public:
+    Point(double a, double b);
 
-   public:
+    ~Point();
 
-          Point(double x, double y );
+    Point(const Point &P);
 
-          static int Counter() ;
+    Point &operator=(const Point &rhs);
 
-          void setX(double x);
+    void display() const;
 
-          void setY(double y);
+    double getx() const;
 
-          double getDiff(double x,double y);
+    double gety() const;
 
-          static double Diff(double x,double y);
+    void setx(double a);
 
-          double getXcord();
+    void sety(double b);
 
-          double getYcord();
+    int counter() const;
 
-          static int getId();
+    double distance(const Point &P) const;
 
-          void Display();
-
- private :
-
-    double xCord,yCord;
-    static int counter,id;
-
+    static double distance(const Point &P, const Point &Q);
 };
 
 #endif

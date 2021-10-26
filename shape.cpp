@@ -79,6 +79,6 @@ void Shape::move(double dx, double dy)
     double old_x = this->getOrigin().getx();
     double old_y = this->getOrigin().gety();
 
-    origin.sety(old_x + dx);
+    origin.sety(old_x + dx);        // should be set x??
     origin.sety(old_y + dy);
 }

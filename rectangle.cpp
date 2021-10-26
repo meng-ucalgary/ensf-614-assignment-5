@@ -15,7 +15,7 @@
 
 using namespace std;
 
-Rectangle::Rectangle(double x, double y, double a, double b, const char *shapeName): Square(x, y, a, shapeName)
+Rectangle::Rectangle(double x, double y, double a, double b, const char *shapeName): Shape(x, y, shapeName), Square(x, y, a, shapeName)
 {
     this->set_side_b(b);
 }

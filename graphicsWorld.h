@@ -14,6 +14,8 @@ class GraphicsWorld
 {
 public:
     static void run();
+    // PROMISES
+    //    tests various functionalities implemented and print results on stdout
 };
 
 #endif

@@ -20,18 +20,32 @@ protected:
 
 public:
     Square(double x, double y, double side, const char *shapeName);
-
-    ~Square();
+    // REQUIRES
+    //    three arguments of type double and a pointer to built-in string
+    // PROMISES
+    //    creates Square object with the supplied arguments
 
     double area() const;
+    // PROMISES
+    //    returns area of the square
 
     double perimeter() const;
+    // PROMISES
+    //    returns perimeter of the square
 
     double get_side_a() const;
+    // PROMISES
+    //    returns side_a of the Square
 
     void set_side_a(double side);
+    // REQUIRES
+    //    an argument of type double
+    // PROMISES
+    //    sets the side_a of Square as side
 
     void display() const;
+    // PROMISES
+    //    prints the Square object to stdout
 };
 
 #endif

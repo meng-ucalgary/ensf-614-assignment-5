@@ -15,7 +15,6 @@ using namespace std;
 
 Shape::Shape(double x, double y, const char *shapeName) : origin(Point(x, y))
 {
-    // this->origin = Point(x, y);
     this->shapeName = new char[strlen(shapeName) + 1];
     strcpy(this->shapeName, shapeName);
 }
@@ -62,15 +61,15 @@ const char *Shape::getName() const
     return this->shapeName;
 }
 
-double Shape::distance(Shape &other) const
+double Shape::distance(Shape &S) const
 {
-    double dist = this->getOrigin().distance(other.getOrigin());
+    double dist = this->getOrigin().distance(S.getOrigin());
     return dist;
 }
 
-double Shape::distance(Shape &the_shape, Shape &other)
+double Shape::distance(Shape &S, Shape &T)
 {
-    double dist = the_shape.getOrigin().distance(the_shape.getOrigin(), other.getOrigin());
+    double dist = S.getOrigin().distance(S.getOrigin(), T.getOrigin());
     return dist;
 }
 

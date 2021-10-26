@@ -1,3 +1,12 @@
+/*
+ * File Name:               curvecut.cpp
+ * Course:                  ENSF 614 - Fall 2021
+ * Lab # and Assignment #:  Lab 5 Exercise C
+ * Lab section:             C02
+ * Completed by:            Aastha Patel, Bhavyai Gupta
+ * Submission Date:         October 26, 2021
+ */
+
 #include "curvecut.h"
 #include "circle.h"
 #include "shape.h"
@@ -12,9 +21,6 @@ CurveCut :: CurveCut(double x, double y, double w,double l , double r,const char
 {
     this-> set_width(w);
 }
-
-CurveCut ::~ CurveCut()
-{   }
 
 double CurveCut :: area() const
 {

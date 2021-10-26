@@ -1,3 +1,12 @@
+/*
+ * File Name:               circle.cpp
+ * Course:                  ENSF 614 - Fall 2021
+ * Lab # and Assignment #:  Lab 5 Exercise B
+ * Lab section:             C01
+ * Completed by:            Aastha Patel, Bhavyai Gupta
+ * Submission Date:         October 26, 2021
+ */
+
 #include "circle.h"
 #include "shape.h"
 #include "point.h"
@@ -11,8 +20,6 @@ Circle :: Circle(double x, double y, double r, const char *shapeName): Shape(x, 
     this->set_radius(r);
 }
 
-Circle::~ Circle(){
-}
 
 double Circle :: area() const
 {

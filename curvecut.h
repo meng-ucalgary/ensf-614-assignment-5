@@ -1,38 +1,40 @@
 /*
  * File Name:               curvecut.h
  * Course:                  ENSF 614 - Fall 2021
- * Lab # and Assignment #:  Lab 5 Exercise B
- * Lab section:             C02
+ * Lab # and Assignment #:  Lab 5 Exercise C
+ * Lab section:             B01
  * Completed by:            Aastha Patel, Bhavyai Gupta
  * Submission Date:         October 26, 2021
  */
 
+#include "circle.h"
 #include "rectangle.h"
-#include "Circle.h"
+
 #ifndef CURVECUT_H
 #define CURVECUT_H
 
-class CurveCut : public Circle,public Rectangle
+class CurveCut : public Circle, public Rectangle
 {
-
 protected:
-
-double width;
+    double width;
 
 public:
-
-    CurveCut(double x, double y, double a, double w,double r, const char *shapeName);
+    CurveCut(double x, double y, double a, double w, double r, const char *shapeName);
+    // REQUIRES
+    //    five args x, y for origin a, w for rectangle r for circle and a char pointer for name
+    // PROMISES
+    //    create CurveCut object from the given args
 
     double area() const;
+    // PROMISES
+    //    calculate & return the area of curvecut
 
     double perimeter() const;
-
-    double get_width() const;
-
-    void set_width(double w);
+    // PROMISES
+    //    calculate & return the perimeter of curvecut
 
     void display() const;
-
+    // PROMISES
+    //    displays CurveCut's origin, length, width, radius and name
 };
 #endif
-
